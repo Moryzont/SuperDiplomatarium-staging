@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Om samlingen | SuperDiplomatarium</title>
+  <meta name="description" content="...">
+  <meta name="robots" content="noindex, nofollow">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=EB+Garamond:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- Site CSS -->
+  <link rel="stylesheet" href="/SuperDiplomatarium-staging/assets/css/main.css">
+
+  <script>window.SITE_BASE = "/SuperDiplomatarium-staging";</script>
+  <!-- i18n must load early -->
+  <script src="/SuperDiplomatarium-staging/assets/js/i18n.js"></script>
+</head>
+<body>
+  <div style="background:#b45309;color:#fff;text-align:center;padding:6px 16px;font:600 14px/1.4 Inter,sans-serif">Testversjon (staging) – ikke den offentlige nettsiden. Den finner du på <a href="https://moryzont.github.io/SuperDiplomatarium/" style="color:#fff;text-decoration:underline">moryzont.github.io/SuperDiplomatarium</a>.</div>
+  <header class="site-header">
+    <nav class="navbar">
+      <div class="container">
+        <a href="/SuperDiplomatarium-staging/" class="brand" aria-label="SuperDiplomatarium">
+          <span class="brand-initial">S</span><span class="brand-rest">uperDiplomatarium</span>
+        </a>
+        <button class="nav-toggle" type="button" aria-label="Meny" aria-expanded="false" aria-controls="nav-links">☰</button>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="/SuperDiplomatarium-staging/sok/" data-i18n="nav.search">Søk</a></li>
+          <li><a href="/SuperDiplomatarium-staging/kart/" data-i18n="nav.map">Kart</a></li>
+          <li><a href="/SuperDiplomatarium-staging/register/" data-i18n="nav.register">Register</a></li>
+          <li><a href="/SuperDiplomatarium-staging/tidslinje/" data-i18n="nav.timeline">Tidslinje</a></li>
+          <li><a href="/SuperDiplomatarium-staging/om/" data-i18n="nav.about">Om samlingen</a></li>
+          <li><button id="lang-toggle" class="lang-toggle" type="button">English</button></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container page-content">
+    <div class="about-container">
+  <h1>Om SuperDiplomatarium</h1>
+
+  <section class="about-intro">
+    <p class="lead">
+      SuperDiplomatarium er en portal for diplomdata. Her har jeg samlet sammen diplomer og regester fra
+      Diplomatarium Norvegicum, Regesta Norvegica, Diplomatarium Danicum, Svenskt Diplomatariums
+      huvudkartotek, Diplomatarium Fennicum og Diplomatarium Islandicum. Brev som finnes i flere av
+      samlingene er koblet sammen, og datafeltene er standardisert slik at de skal bli lettere å bruke for
+      forskere, lærere, studenter og andre med interesse for middelalderhistorie.
+    </p>
+    
+    <p class="warning-box">
+      <strong>Viktig:</strong> Når du bruker denne portalen er det viktig å være klar over begrensningene 
+      som ligger i materialet.
+    </p>
+  </section>
+
+  <section class="about-section" id="samlingene">
+    <h2>Samlingene</h2>
+    <p class="coll-lead">
+      Hver samling er hentet inn på sin måte, og de er ulikt komplette. Stolpene viser hvor stor del av
+      brevene i samlingen som har hvert felt på dette nettstedet; tallene regnes ut fra datasettet ved hver
+      publisering. Under hver samling står det som gjenstår.
+    </p>
+    
+    <article class="coll-card" data-key="DN" style="--coll: #5c6d4a">
+      <header class="coll-head">
+        <span class="source-badge" style="background-color: #5c6d4a">DN</span>
+        <h3>Diplomatarium Norvegicum</h3>
+        <span class="coll-span">Bind I–XXIII (1847–2011), brev til 1570</span>
+        <span class="coll-count" data-stat="records"></span>
+      </header>
+      <p><strong>Kilde:</strong> Dokumentasjonsprosjektets digitale utgave ved Universitetet i Oslo (SGML-filene bak dokpro.uio.no).</p>
+      <p><strong>Slik er den hentet inn:</strong> Filene er lest maskinelt: regest, brevtekst, kildeapparat («Kilde») og fotnoter er skilt ut felt for felt, og DN-nummer, dato og sted er standardisert. Bindenes trykte navne- og sakregistre er avskrevet fra Nasjonalbibliotekets skanninger side for side. Et registeroppslag vises bare når det er bekreftet: av brevets egen tekst, av at siden har ett brev, eller av en leser som har lest alle brevene på siden i sin helhet. Bind I–VII er lest inn (om lag 90 000 oppslag på 7 300 brev).</p>
+      <div class="cov" aria-label="Dekning per felt">
+        <div class="cov-row" data-stat="summary"><span class="cov-label">Regest</span><span class="cov-bar"><span class="cov-fill"></span></span><span class="cov-num"></span></div>
+        <div class="cov-row" data-stat="body"><span class="cov-label">Brevtekst</span><span class="cov-bar"><span class="cov-fill"></span></span><span class="cov-num"></span></div>
+        <div class="cov-row" data-stat="translation"><span class="cov-label">Oversettelse</span><span class="cov-bar"><span class="cov-fill"></span></span><span class="cov-num"></span></div>
+        <div class="cov-row" data-stat="sourceApparatus"><span class="cov-label">Kildeapparat</span><span class="cov-bar"><span class="cov-fill"></span></span><span class="cov-num"></span></div>
+        <div class="cov-row" data-stat="apparatus"><span class="cov-label">Tekstapparat</span><span class="cov-bar"><span class="cov-fill"></span></span><span class="cov-num"></span></div>
+        <div class="cov-row" data-stat="footnotes"><span class="cov-label">Fotnoter</span><span class="cov-bar"><span class="cov-fill"></span></span><span class="cov-num"></span></div>
+        <div class="cov-row" data-stat="dated"><span class="cov-label">Datert</span><span class="cov-bar"><span class="cov-fill"></span></span><span class="cov-num"></span></div>
+        <div class="cov-row" data-stat="placed"><span class="cov-label">Stedfestet (koordinat)</span><span class="cov-bar"><span class="cov-fill"></span></span><span class="cov-num"></span></div>
+        <div class="cov-row" data-stat="mentions"><span class="cov-label">Register (personer, steder, emner)</span><span class="cov-bar"><span class="cov-fill"></span></span><span class="cov-num"></span></div>
+        <div class="cov-row" data-stat="linked"><span class="cov-label">Koblet til andre samlinger</span><span class="cov-bar"><span class="cov-fill"></span></span><span class="cov-num"></span></div>
+      </div>
+      <div class="coll-todo">
+        <strong>Gjenstår:</strong>
+        <ul><li>Registrene i bind VIII–XXIII leses inn på samme måte som bind I–VII.</li><li>Om lag 3 000 registeroppslag i bind I–VII som ingen leser fant igjen i brevene på siden, står igjen for en ny gjennomgang.</li><li>Fullføre stedfestingen av brevene som ennå mangler koordinat.</li><li>Maskinoversettelse av brevtekstene til norsk.</li></ul>
+      </div>
+    </article>
+    
+    <article class="coll-card" data-key="RN" style="--coll: #6b8e7a">
+      <header class="coll-head">
+        <span class="source-badge" style="background-color: #6b8e7a">RN</span>
+        <h3>Regesta Norvegica</h3>
+        <span class="coll-span">Bind I–X (1989–2015), regester 822–1430</span>
+        <span class="coll-count" data-stat="records"></span>
+      </header>
+      <p><strong>Kilde:</strong> Dokumentasjonsprosjektets regestbase (dokpro.uio.no), inkludert det samlede navne- og sakregisteret.</p>
+      <p><strong>Slik er den hentet inn:</strong> Regestene er hentet med bind- og regestnummer, datert og stedfestet etter RNs egen datering. Registeret (60 680 oppslagsord) er lest inn som register på brevene: personer, steder og emneord. Regestene er koblet til DN-brevene de bygger på.</p>
+      <div class="cov" aria-label="Dekning per felt">
+        <div class="cov-row" data-stat="summary"><span class="cov-label">Regest</span><span class="cov-bar"><span class="cov-fill"></span></span><span class="cov-num"></span></div>
+        <div class="cov-row" data-stat="body"><span class="cov-label">Brevtekst</span><span class="cov-bar"><span class="cov-fill"></span></span><span class="cov-num"></span></div>
+        <div class="cov-row" data-stat="translation"><span class="cov-label">Oversettelse</span><span class="cov-bar"><span class="cov-fill"></span></span><span class="cov-num"></span></div>
+        <div class="cov-row" data-stat="sourceApparatus"><span class="cov-label">Kildeapparat</span><span class="cov-bar"><span class="cov-fill"></span></span><span class="cov-num"></span></div>
+        <div class="cov-row" data-stat="apparatus"><span class="cov-label">Tekstapparat</span><span class="cov-bar"><span class="cov-fill"></span></span><span class="cov-num"></span></div>
+        <div class="cov-row" data-stat="footnotes"><span class="cov-label">Fotnoter</span><span class="cov-bar"><span class="cov-fill"></span></span><span class="cov-num"></span></div>
+        <div class="cov-row" data-stat="dated"><span class="cov-label">Datert</span><span class="cov-bar"><span class="cov-fill"></span></span><span class="cov-num"></span></div>
+        <div class="cov-row" data-stat="placed"><span class="cov-label">Stedfestet (koordinat)</span><span class="cov-bar"><span class="cov-fill"></span></span><span class="cov-num"></span></div>
+        <div class="cov-row" data-stat="mentions"><span class="cov-label">Register (personer, steder, emner)</span><span class="cov-bar"><span class="cov-fill"></span></span><span class="cov-num"></span></div>
+        <div class="cov-row" data-stat="linked"><span class="cov-label">Koblet til andre samlinger</span><span class="cov-bar"><span class="cov-fill"></span></span><span class="cov-num"></span></div>
+      </div>
+      <div class="coll-todo">
+        <strong>Gjenstår:</strong>
+        <ul><li>Koble de regestene som ennå står uten DN-brev.</li><li>Registerets underoppslag (strekoppføringene) er slått sammen med hovedoppslaget og bør skilles ut.</li></ul>
+      </div>
+    </article>
+    
+    <article class="coll-card" data-key="DD" style="--coll: #8b5a5a">
+      <header class="coll-head">
+        <span class="source-badge" style="background-color: #8b5a5a">DD</span>
+        <h3>Diplomatarium Danicum</h3>
+        <span class="coll-span">1. række (789–) til og med 1450</span>
+        <span class="coll-count" data-stat="records"></span>
+      </header>
+      <p><strong>Kilde:</strong> Det Danske Sprog- og Litteraturselskabs TEI-utgave (github.com/dsldk/diplomatarium-danicum), med de gamle person-, steds- og sakregistrene fra diplomatarium.dk.</p>
+      <p><strong>Slik er den hentet inn:</strong> TEI-filene er omsatt til regest, brevtekst, oversettelse, tekstapparat og fotnoter; vitnebeskrivelsene bygges av de strukturerte feltene. Registrene (10 379 oppslagsord, hovedsakelig 1401–1450) er lest inn som register.</p>
+      <div class="cov" aria-label="Dekning per felt">
+        <div class="cov-row" data-stat="summary"><span class="cov-label">Regest</span><span class="cov-bar"><span class="cov-fill"></span></span><span class="cov-num"></span></div>
+        <div class="cov-row" data-stat="body"><span class="cov-label">Brevtekst</span><span class="cov-bar"><span class="cov-fill"></span></span><span class="cov-num"></span></div>
+        <div class="cov-row" data-stat="translation"><span class="cov-label">Oversettelse</span><span class="cov-bar"><span class="cov-fill"></span></span><span class="cov-num"></span></div>
+        <div class="cov-row" data-stat="sourceApparatus"><span class="cov-label">Kildeapparat</span><span class="cov-bar"><span class="cov-fill"></span></span><span class="cov-num"></span></div>
+        <div class="cov-row" data-stat="apparatus"><span class="cov-label">Tekstapparat</span><span class="cov-bar"><span class="cov-fill"></span></span><span class="cov-num"></span></div>
+        <div class="cov-row" data-stat="footnotes"><span class="cov-label">Fotnoter</span><span class="cov-bar"><span class="cov-fill"></span></span><span class="cov-num"></span></div>
+        <div class="cov-row" data-stat="dated"><span class="cov-label">Datert</span><span class="cov-bar"><span class="cov-fill"></span></span><span class="cov-num"></span></div>
+        <div class="cov-row" data-stat="placed"><span class="cov-label">Stedfestet (koordinat)</span><span class="cov-bar"><span class="cov-fill"></span></span><span class="cov-num"></span></div>
+        <div class="cov-row" data-stat="mentions"><span class="cov-label">Register (personer, steder, emner)</span><span class="cov-bar"><span class="cov-fill"></span></span><span class="cov-num"></span></div>
+        <div class="cov-row" data-stat="linked"><span class="cov-label">Koblet til andre samlinger</span><span class="cov-bar"><span class="cov-fill"></span></span><span class="cov-num"></span></div>
+      </div>
+      <div class="coll-todo">
+        <strong>Gjenstår:</strong>
+        <ul><li>Registrene dekker bare 1401–1450; brevene før 1401 står uten register.</li><li>Trykt DD-nummer mangler for en del av de nettpubliserte brevene.</li></ul>
+      </div>
+    </article>
+    
+    <article class="coll-card" data-key="SDHK" style="--coll: #8b7355">
+      <header class="coll-head">
+        <span class="source-badge" style="background-color: #8b7355">SDHK</span>
+        <h3>Svenskt Diplomatariums huvudkartotek</h3>
+        <span class="coll-span">Brev til 1540</span>
+        <span class="coll-count" data-stat="records"></span>
+      </header>
+      <p><strong>Kilde:</strong> Riksarkivets eksport av huvudkartoteket (november 2024), med brevtekst der Diplomatarium Suecanum er trykt.</p>
+      <p><strong>Slik er den hentet inn:</strong> Regest, brevtekst, vitner, trykk, segl og kommentarer er hentet fra eksporten felt for felt. Eksporten mangler utgavens tekstapparat og fotnoter, og erstatter utgavens skilletegn «·» med «?».</p>
+      <div class="cov" aria-label="Dekning per felt">
+        <div class="cov-row" data-stat="summary"><span class="cov-label">Regest</span><span class="cov-bar"><span class="cov-fill"></span></span><span class="cov-num"></span></div>
+        <div class="cov-row" data-stat="body"><span class="cov-label">Brevtekst</span><span class="cov-bar"><span class="cov-fill"></span></span><span class="cov-num"></span></div>
+        <div class="cov-row" data-stat="translation"><span class="cov-label">Oversettelse</span><span class="cov-bar"><span class="cov-fill"></span></span><span class="cov-num"></span></div>
+        <div class="cov-row" data-stat="sourceApparatus"><span class="cov-label">Kildeapparat</span><span class="cov-bar"><span class="cov-fill"></span></span><span class="cov-num"></span></div>
+        <div class="cov-row" data-stat="apparatus"><span class="cov-label">Tekstapparat</span><span class="cov-bar"><span class="cov-fill"></span></span><span class="cov-num"></span></div>
+        <div class="cov-row" data-stat="footnotes"><span class="cov-label">Fotnoter</span><span class="cov-bar"><span class="cov-fill"></span></span><span class="cov-num"></span></div>
+        <div class="cov-row" data-stat="dated"><span class="cov-label">Datert</span><span class="cov-bar"><span class="cov-fill"></span></span><span class="cov-num"></span></div>
+        <div class="cov-row" data-stat="placed"><span class="cov-label">Stedfestet (koordinat)</span><span class="cov-bar"><span class="cov-fill"></span></span><span class="cov-num"></span></div>
+        <div class="cov-row" data-stat="mentions"><span class="cov-label">Register (personer, steder, emner)</span><span class="cov-bar"><span class="cov-fill"></span></span><span class="cov-num"></span></div>
+        <div class="cov-row" data-stat="linked"><span class="cov-label">Koblet til andre samlinger</span><span class="cov-bar"><span class="cov-fill"></span></span><span class="cov-num"></span></div>
+      </div>
+      <div class="coll-todo">
+        <strong>Gjenstår:</strong>
+        <ul><li>Tekstapparat og fotnoter finnes bare i de skannede sidene av Diplomatarium Suecanum (pdf hos Riksarkivet); må leses inn fra bildene.</li><li>Regestene i den trykte utgaven etter 1401 er fyldigere enn kartotekets.</li><li>Stedfesting og register.</li></ul>
+      </div>
+    </article>
+    
+    <article class="coll-card" data-key="DF" style="--coll: #5a7a6b">
+      <header class="coll-head">
+        <span class="source-badge" style="background-color: #5a7a6b">DF</span>
+        <h3>Diplomatarium Fennicum</h3>
+        <span class="coll-span">Brev til 1530</span>
+        <span class="coll-count" data-stat="records"></span>
+      </header>
+      <p><strong>Kilde:</strong> Kansallisarkistos Diplomatarium Fennicum (df.kansallisarkisto.fi).</p>
+      <p><strong>Slik er den hentet inn:</strong> Regest, brevtekst og kildeopplysninger er hentet fra tjenesten brev for brev, med tjenestens egne stedsangivelser og koordinater. Brevene er koblet til SDHK der de samme brevene finnes der.</p>
+      <div class="cov" aria-label="Dekning per felt">
+        <div class="cov-row" data-stat="summary"><span class="cov-label">Regest</span><span class="cov-bar"><span class="cov-fill"></span></span><span class="cov-num"></span></div>
+        <div class="cov-row" data-stat="body"><span class="cov-label">Brevtekst</span><span class="cov-bar"><span class="cov-fill"></span></span><span class="cov-num"></span></div>
+        <div class="cov-row" data-stat="translation"><span class="cov-label">Oversettelse</span><span class="cov-bar"><span class="cov-fill"></span></span><span class="cov-num"></span></div>
+        <div class="cov-row" data-stat="sourceApparatus"><span class="cov-label">Kildeapparat</span><span class="cov-bar"><span class="cov-fill"></span></span><span class="cov-num"></span></div>
+        <div class="cov-row" data-stat="apparatus"><span class="cov-label">Tekstapparat</span><span class="cov-bar"><span class="cov-fill"></span></span><span class="cov-num"></span></div>
+        <div class="cov-row" data-stat="footnotes"><span class="cov-label">Fotnoter</span><span class="cov-bar"><span class="cov-fill"></span></span><span class="cov-num"></span></div>
+        <div class="cov-row" data-stat="dated"><span class="cov-label">Datert</span><span class="cov-bar"><span class="cov-fill"></span></span><span class="cov-num"></span></div>
+        <div class="cov-row" data-stat="placed"><span class="cov-label">Stedfestet (koordinat)</span><span class="cov-bar"><span class="cov-fill"></span></span><span class="cov-num"></span></div>
+        <div class="cov-row" data-stat="mentions"><span class="cov-label">Register (personer, steder, emner)</span><span class="cov-bar"><span class="cov-fill"></span></span><span class="cov-num"></span></div>
+        <div class="cov-row" data-stat="linked"><span class="cov-label">Koblet til andre samlinger</span><span class="cov-bar"><span class="cov-fill"></span></span><span class="cov-num"></span></div>
+      </div>
+      <div class="coll-todo">
+        <strong>Gjenstår:</strong>
+        <ul><li>Register (personer og steder) finnes ikke i tjenesten.</li><li>Datering og stedfesting følger tjenesten; ikke gjennomgått.</li></ul>
+      </div>
+    </article>
+    
+    <article class="coll-card" data-key="DI" style="--coll: #6a6e8c">
+      <header class="coll-head">
+        <span class="source-badge" style="background-color: #6a6e8c">DI</span>
+        <h3>Diplomatarium Islandicum</h3>
+        <span class="coll-span">16 bind (1857–1972), brev 834–1570</span>
+        <span class="coll-count" data-stat="records"></span>
+      </header>
+      <p><strong>Kilde:</strong> De trykte bindene (skanninger), lest av språkmodeller side for side.</p>
+      <p><strong>Slik er den hentet inn:</strong> Hver side er transkribert, brevene er skilt ut med nummer, dato, sted, regest, brevtekst, kildeapparat og fotnoter, og tallene er kontrollert mot bindets innholdsfortegnelse. Bindenes registre er lest inn som register på brevene. Bind I og II er ferdige.</p>
+      <div class="cov" aria-label="Dekning per felt">
+        <div class="cov-row" data-stat="summary"><span class="cov-label">Regest</span><span class="cov-bar"><span class="cov-fill"></span></span><span class="cov-num"></span></div>
+        <div class="cov-row" data-stat="body"><span class="cov-label">Brevtekst</span><span class="cov-bar"><span class="cov-fill"></span></span><span class="cov-num"></span></div>
+        <div class="cov-row" data-stat="translation"><span class="cov-label">Oversettelse</span><span class="cov-bar"><span class="cov-fill"></span></span><span class="cov-num"></span></div>
+        <div class="cov-row" data-stat="sourceApparatus"><span class="cov-label">Kildeapparat</span><span class="cov-bar"><span class="cov-fill"></span></span><span class="cov-num"></span></div>
+        <div class="cov-row" data-stat="apparatus"><span class="cov-label">Tekstapparat</span><span class="cov-bar"><span class="cov-fill"></span></span><span class="cov-num"></span></div>
+        <div class="cov-row" data-stat="footnotes"><span class="cov-label">Fotnoter</span><span class="cov-bar"><span class="cov-fill"></span></span><span class="cov-num"></span></div>
+        <div class="cov-row" data-stat="dated"><span class="cov-label">Datert</span><span class="cov-bar"><span class="cov-fill"></span></span><span class="cov-num"></span></div>
+        <div class="cov-row" data-stat="placed"><span class="cov-label">Stedfestet (koordinat)</span><span class="cov-bar"><span class="cov-fill"></span></span><span class="cov-num"></span></div>
+        <div class="cov-row" data-stat="mentions"><span class="cov-label">Register (personer, steder, emner)</span><span class="cov-bar"><span class="cov-fill"></span></span><span class="cov-num"></span></div>
+        <div class="cov-row" data-stat="linked"><span class="cov-label">Koblet til andre samlinger</span><span class="cov-bar"><span class="cov-fill"></span></span><span class="cov-num"></span></div>
+      </div>
+      <div class="coll-todo">
+        <strong>Gjenstår:</strong>
+        <ul><li>Bind III–XVI gjenstår (XII–XVI har uavklarte rettigheter).</li><li>Transkripsjonene bør stikkprøves av en historiker mot skanningene.</li><li>Stedfesting av brevene.</li></ul>
+      </div>
+    </article>
+    
+    <p class="coll-generated"></p>
+  </section>
+
+  <section class="about-section">
+    <h2>Viktige forbehold</h2>
+    
+    <div class="numbered-list">
+      <div class="list-item">
+        <span class="number">1</span>
+        <div class="content">
+          <strong>Mulige feil i data:</strong> Det kan være feil i både dato og sted. Med over 100 000 ulike 
+          poster i datasettet kan man garantert finne både trykkfeil og andre feil. Det kan derfor være lurt 
+          å dobbeltsjekke. Jeg har standardisert data fra Regesta Norvegica og Diplomatarium Norvegicum – ikke 
+          korrigert det, med mindre feilene var fullstendig åpenbare (ikke mange).
+        </div>
+      </div>
+      
+      <div class="list-item">
+        <span class="number">2</span>
+        <div class="content">
+          <strong>Skraping fra nettet:</strong> Materialet er per nå skrapet fra nettet. I praksis betyr det 
+          at jeg kan ha oversett enkelte deler av datamaterialet. Dette har jeg korrigert kontinuerlig etterhvert 
+          som jeg har oppdaget det – men det kan likevel være flere som jeg ikke har oppdaget.
+        </div>
+      </div>
+      
+      <div class="list-item">
+        <span class="number">3</span>
+        <div class="content">
+          <strong>Videreførte feil:</strong> Feil i Diplomatarium, som ikke er blitt korrigert i regestene, 
+          er tatt med videre i dette datasettet.
+        </div>
+      </div>
+      
+      <div class="list-item">
+        <span class="number">4</span>
+        <div class="content">
+          <strong>Vanlige stedsnavn:</strong> Enkelte stedsnavn som f.eks. Berg, Nes, Hov, Haug, Mo osv. er 
+          så vanlige at det er vanskelig å fastslå sted helt nøyaktig. Dette på tross av at det i diplomene 
+          ofte er presisert kirkesogn, skipsreie og område – så finnes det allikevel så mange berg, ness, 
+          hov og hauger at det kan være vanskelig å identifisere plassen nøyaktig.
+        </div>
+      </div>
+      
+      <div class="list-item">
+        <span class="number">5</span>
+        <div class="content">
+          <strong>Utgåtte stedsnavn:</strong> Enkelte stedsnavn har gått ut av bruk for så lenge siden at 
+          det ikke har vært mulig å plassere diplomene på et moderne sted.
+        </div>
+      </div>
+      
+      <div class="list-item">
+        <span class="number">6</span>
+        <div class="content">
+          <strong>Dekningsgrad:</strong> Per nå er 95% av diplomene med et stedsnavn og koordinat. 85% av 
+          de unike stedsnavnene er plassert. Små plasser er overrepresentert i de som gjenstår.
+        </div>
+      </div>
+      
+      <div class="list-item">
+        <span class="number">7</span>
+        <div class="content">
+          <strong>Like stedsnavn:</strong> Det gjenstår å skille plasser med likt navn fra hverandre, f.eks. 
+          Lier mellom Asker og Drammen og Lier i Belgia. Jeg vil starte med disse korrigeringene så snart 
+          alle diplomene har fått et stedsnavn.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-section">
+    <h2>Om dataene</h2>
+    
+    <div class="numbered-list">
+      <div class="list-item">
+        <span class="number">1</span>
+        <div class="content">
+          <strong>Koordinatformat:</strong> Koordinatene er i WGS84 format.
+        </div>
+      </div>
+      
+      <div class="list-item">
+        <span class="number">2</span>
+        <div class="content">
+          <strong>Punktdata:</strong> Alle steder er et punkt. I enkelte tilfeller er det uklart om utstederen 
+          av brevet har ment en region eller en plass når personen har skrevet utstedelsesstedet. Eksempelvis, 
+          et brev som er skrevet i «Akershus» kan være skrevet på Akershus festning eller en plass i området 
+          Akershus. Det samme med Vardøhus, Bohus, Bergenshus osv. Noen ganger er det ikke tvil, andre ganger 
+          er det. Uansett er koordinatet plassert på et hovedsted men vil bli merket i datasettet at det kan 
+          være snakk om en region i tilfeller der det kan være aktuelt.
+        </div>
+      </div>
+      
+      <div class="list-item">
+        <span class="number">3</span>
+        <div class="content">
+          <strong>Bykoordinater:</strong> Når byer eller tettsteder blir oppgitt som utstedelsessted er 
+          koordinatet, så langt det lar seg gjøre, plassert på kirken. På plasser med flere enn en kirke, 
+          så er koordinatet forsøkt plassert i sentrum, gamlebyen eller borgen. Dette er mest aktuelt for 
+          større byer utenfor Norge.
+        </div>
+      </div>
+      
+      <div class="list-item">
+        <span class="number">4</span>
+        <div class="content">
+          <strong>Regesta-prioritet:</strong> Regestaen overstyrer diplommateriale i alle tilfeller der 
+          den er uenig med diplomene.
+        </div>
+      </div>
+      
+      <div class="list-item">
+        <span class="number">5</span>
+        <div class="content">
+          <strong>Datointervaller:</strong> Alle datoer er gitt med et tidligste tidspunkt og et seneste 
+          tidspunkt. Dette er for å kunne kode dataene konsist. Enkelte datoer er hele år, enkelte er bare 
+          en dag og enkelte er flere år.
+        </div>
+      </div>
+      
+      <div class="list-item">
+        <span class="number">6</span>
+        <div class="content">
+          <strong>Fuzzy-søk:</strong> Når du søker så søker du med et «fuzzy» søk, som gjør at ting som 
+          nesten er stavet som søkeordet ditt også kommer med i søket.
+        </div>
+      </div>
+      
+      <div class="list-item">
+        <span class="number">7</span>
+        <div class="content">
+          <strong>Nedlasting:</strong> Du kan laste ned det komplette datasettet fra Github-siden som ligger 
+          bak denne nettsiden som en CSV-fil.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-section">
+    <h2>Planer framover</h2>
+    
+    <div class="numbered-list">
+      <div class="list-item">
+        <span class="number">1</span>
+        <div class="content">
+          Fullføring av stedskoding og korrigere koordinatene på steder som f.eks. Lier som er i både 
+          Belgia og utenfor Drammen.
+        </div>
+      </div>
+      
+      <div class="list-item">
+        <span class="number">2</span>
+        <div class="content">
+          Legge inn metadata om oversettere og skaperne av regestene.
+        </div>
+      </div>
+      
+      <div class="list-item">
+        <span class="number">3</span>
+        <div class="content">
+          Forbedre nettløsningen (blant annet en knapp for å rapportere feil).
+        </div>
+      </div>
+      
+      <div class="list-item">
+        <span class="number">4</span>
+        <div class="content">
+          Korrigere feil.
+        </div>
+      </div>
+      
+      <div class="list-item">
+        <span class="number">5</span>
+        <div class="content">
+          Maskinoversette diplomer til norsk.
+        </div>
+      </div>
+      
+      <div class="list-item">
+        <span class="number">6</span>
+        <div class="content">
+          Temaknagger til diplomene og regestene, slik at du kan søke på temaer eller utforske temaer.
+        </div>
+      </div>
+      
+      <div class="list-item">
+        <span class="number">7</span>
+        <div class="content">
+          Legge inn andre skandinaviske diplomsamlinger på samme måte.
+        </div>
+      </div>
+      
+      <div class="list-item">
+        <span class="number">8</span>
+        <div class="content">
+          Trekke ut ytterligere stedsdata og persondata fra diplomene.
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<style>
+  .about-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+  
+  .about-intro {
+    margin-bottom: 3rem;
+  }
+  
+  .lead {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    color: #333;
+    margin-bottom: 1.5rem;
+  }
+  
+  .warning-box {
+    background: #fef5e7;
+    border-left: 4px solid #f39c12;
+    padding: 1rem 1.25rem;
+    border-radius: 4px;
+    margin: 1.5rem 0;
+  }
+  
+  .about-section {
+    margin-bottom: 3rem;
+  }
+  
+  .about-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: #2c3e50;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 0.5rem;
+  }
+  
+  .numbered-list {
+    margin-top: 1.5rem;
+  }
+  
+  .list-item {
+    display: flex;
+    margin-bottom: 1.25rem;
+    align-items: flex-start;
+  }
+  
+  .list-item .number {
+    background: #7a8e74;
+    color: white;
+    min-width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    margin-right: 1rem;
+    flex-shrink: 0;
+    font-size: 0.9rem;
+  }
+  
+  .list-item .content {
+    flex: 1;
+    line-height: 1.6;
+    color: #444;
+  }
+  
+  .list-item .content strong {
+    color: #2c3e50;
+  }
+  
+  @media (max-width: 600px) {
+    .about-container {
+      padding: 1.5rem 1rem;
+    }
+    
+    .list-item .number {
+      min-width: 24px;
+      height: 24px;
+      font-size: 0.85rem;
+    }
+  }
+</style>
+
+<style>
+  .coll-lead { color: #444; line-height: 1.6; margin-bottom: 1.5rem; }
+  .coll-card { border: 1px solid #e0e0e0; border-left: 4px solid var(--coll, #7a8e74); border-radius: 6px; padding: 1rem 1.25rem; margin-bottom: 1.5rem; background: #fff; }
+  .coll-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: .5rem .75rem; margin-bottom: .5rem; }
+  .coll-head h3 { margin: 0; font-size: 1.15rem; color: #2c3e50; }
+  .coll-head .source-badge { color: #fff; padding: .1rem .5rem; border-radius: 4px; font-size: .8rem; font-weight: 600; }
+  .coll-span { color: #666; font-size: .9rem; }
+  .coll-count { margin-left: auto; color: #2c3e50; font-weight: 600; font-size: .95rem; }
+  .coll-card p { margin: .4rem 0; line-height: 1.55; color: #444; }
+  .cov { margin: .9rem 0 .6rem; }
+  .cov-row { display: grid; grid-template-columns: 15rem 1fr 7.5rem; align-items: center; gap: .6rem; font-size: .9rem; margin: .22rem 0; }
+  .cov-label { color: #444; }
+  .cov-bar { display: block; height: .7rem; background: #eef0ea; border-radius: 999px; overflow: hidden; }
+  .cov-fill { display: block; height: 100%; width: 0; background: var(--coll, #7a8e74); border-radius: 999px; transition: width .6s ease; }
+  .cov-num { color: #555; font-variant-numeric: tabular-nums; text-align: right; white-space: nowrap; }
+  .cov-row.cov-none .cov-label, .cov-row.cov-none .cov-num { color: #999; }
+  .coll-todo { margin-top: .6rem; color: #444; line-height: 1.55; }
+  .coll-todo ul { margin: .25rem 0 0 1.25rem; padding: 0; }
+  .coll-generated { color: #777; font-size: .85rem; }
+  @media (max-width: 600px) {
+    .cov-row { grid-template-columns: 1fr; gap: .15rem; margin: .45rem 0; }
+    .cov-num { text-align: left; }
+    .coll-count { margin-left: 0; }
+  }
+</style>
+
+<script>
+  // Fill the coverage bars from data/v3/collections.json (built from the
+  // letter chunks at every publication); the words on the cards come from
+  // _data/collections.yml.
+  (function () {
+    const BASE = (window.SITE_BASE || '/SuperDiplomatarium-staging').replace(/\/+$/, '');
+    const fmt = (n) => Number(n).toLocaleString('nb-NO');
+    fetch(`${BASE}/data/v3/collections.json`).then(r => r.ok ? r.json() : null).then(data => {
+      if (!data || !data.collections) return;
+      document.querySelectorAll('.coll-card').forEach(card => {
+        const st = data.collections[card.dataset.key];
+        if (!st) return;
+        const n = st.records || 0;
+        const count = card.querySelector('.coll-count');
+        if (count) count.textContent = `${fmt(n)} brev${st.yearMin && st.yearMax ? ` · ${st.yearMin}–${st.yearMax}` : ''}`;
+        card.querySelectorAll('.cov-row').forEach(row => {
+          const v = st[row.dataset.stat] || 0;
+          const pct = n ? Math.round(1000 * v / n) / 10 : 0;
+          row.querySelector('.cov-fill').style.width = `${Math.min(100, pct)}%`;
+          row.querySelector('.cov-num').textContent = `${fmt(v)} (${pct.toLocaleString('nb-NO')} %)`;
+          row.classList.toggle('cov-none', v === 0);
+        });
+      });
+      const gen = document.querySelector('.coll-generated');
+      if (gen && data.generated) gen.textContent = `Tallene er regnet ut ${new Date(data.generated).toLocaleDateString('nb-NO', { year: 'numeric', month: 'long', day: 'numeric' })}.`;
+    }).catch(() => {});
+  })();
+</script>
+
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p> 2026 Vetle Lars Wisløff Sandring</p>
+    </div>
+  </footer>
+  <script>
+    // Data files are kept between visits by a service worker (sw.js); it never serves pages or scripts.
+    if ('serviceWorker' in navigator) navigator.serviceWorker.register('/SuperDiplomatarium-staging/sw.js').catch(function () {});
+    // Mobile menu: the ☰ button (shown by CSS under 640px) opens and closes the nav links.
+    (function () {
+      var btn = document.querySelector('.nav-toggle'), links = document.getElementById('nav-links');
+      if (!btn || !links) return;
+      btn.addEventListener('click', function () {
+        var open = links.classList.toggle('is-open');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+    })();
+  </script>
+</body>
+</html>
