@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Søk i brevsamlingen | SuperDiplomatarium</title>
+  <meta name="description" content="...">
+  <meta name="robots" content="noindex, nofollow">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=EB+Garamond:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- Site CSS -->
+  <link rel="stylesheet" href="/SuperDiplomatarium-staging/assets/css/main.css">
+
+  <script>window.SITE_BASE = "/SuperDiplomatarium-staging";</script>
+  <!-- i18n must load early -->
+  <script src="/SuperDiplomatarium-staging/assets/js/i18n.js"></script>
+</head>
+<body>
+  <div style="background:#b45309;color:#fff;text-align:center;padding:6px 16px;font:600 14px/1.4 Inter,sans-serif">Testversjon (staging) – ikke den offentlige nettsiden. Den finner du på <a href="https://moryzont.github.io/SuperDiplomatarium/" style="color:#fff;text-decoration:underline">moryzont.github.io/SuperDiplomatarium</a>.</div>
+  <header class="site-header">
+    <nav class="navbar">
+      <div class="container">
+        <a href="/SuperDiplomatarium-staging/" class="brand" aria-label="SuperDiplomatarium">
+          <span class="brand-initial">S</span><span class="brand-rest">uperDiplomatarium</span>
+        </a>
+        <button class="nav-toggle" type="button" aria-label="Meny" aria-expanded="false" aria-controls="nav-links">☰</button>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="/SuperDiplomatarium-staging/sok/" data-i18n="nav.search">Søk</a></li>
+          <li><a href="/SuperDiplomatarium-staging/kart/" data-i18n="nav.map">Kart</a></li>
+          <li><a href="/SuperDiplomatarium-staging/register/" data-i18n="nav.register">Register</a></li>
+          <li><a href="/SuperDiplomatarium-staging/tidslinje/" data-i18n="nav.timeline">Tidslinje</a></li>
+          <li><a href="/SuperDiplomatarium-staging/om/" data-i18n="nav.about">Om samlingen</a></li>
+          <li><button id="lang-toggle" class="lang-toggle" type="button">English</button></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container page-content">
+    <div class="search-container">
+  <h1 data-i18n="search.title">Søk i brevsamlingen</h1>
+
+  <!-- Main search area -->
+  <div class="search-area">
+    <div class="search-row">
+      <div class="search-field-select">
+        <select id="search-field" class="field-select" data-i18n-options>
+          <option value="text" selected data-i18n="search.field.text">Tekst (sammendrag)</option>
+          <option value="id" data-i18n="search.field.id">Referanse / ID</option>
+          <option value="fulltext" data-i18n="search.field.fulltext">Fulltekst (brevtekst)</option>
+          <option value="place" data-i18n="search.field.place">Sted</option>
+          <option value="register" data-i18n="search.field.register">Register (personer, steder, emneord)</option>
+          <option value="all" data-i18n="search.field.all">Alt</option>
+        </select>
+      </div>
+      <div class="search-input-wrapper">
+        <input type="text" id="search-input" placeholder="Søk i sammendrag..." data-i18n-placeholder="search.placeholder.text" autocomplete="off">
+        <button id="search-btn" class="btn btn-primary" data-i18n="search.button">Søk</button>
+      </div>
+    </div>
+
+    <div class="search-options-row">
+      <details class="search-help">
+        <summary data-i18n="tips.title">Søketips</summary>
+        <div class="search-tips-content">
+          <p><strong data-i18n="tips.ref">Søk etter referanse:</strong> <span data-i18n="tips.ref.desc">Velg «Referanse / ID» og skriv f.eks.</span> <code>DN XII 251</code>, <code>RN I 223</code>, <code>SDHK 1234</code> eller <code>DD 123</code></p>
+          <p><strong data-i18n="tips.text">Tekstsøk:</strong> <span data-i18n="tips.text.desc">Søk etter ord eller fraser i sammendrag. Eksempel:</span> <code>kong Håkon</code>, <code>biskop</code>, <code>jordegods</code></p>
+          <p><strong data-i18n="tips.place">Stedsøk:</strong> <span data-i18n="tips.place.desc">Velg «Sted» for å søke etter stedsnavn. Eksempel:</span> <code>Bergen</code>, <code>Nidaros</code>, <code>Oslo</code></p>
+          <p><strong data-i18n="tips.date">Datofilter:</strong> <span data-i18n="tips.date.desc">Bruk «Filtre» for å begrense til en tidsperiode, f.eks. 1200–1350</span></p>
+          <p><strong data-i18n="tips.source">Kildefilter:</strong> <span data-i18n="tips.source.desc">Bruk «Filtre» for å begrense søket til bestemte diplomataria</span></p>
+        </div>
+      </details>
+      <details class="search-filters">
+        <summary data-i18n="filters.title">Filtre</summary>
+        <div class="filters-content">
+          <div class="filter-group date-filter">
+            <label data-i18n="filters.date">Datoperiode:</label>
+            <input id="date-from" type="text" placeholder="Fra (YYYY)" data-i18n-placeholder="filters.from" autocomplete="off">
+            <span class="date-sep">–</span>
+            <input id="date-to" type="text" placeholder="Til (YYYY)" data-i18n-placeholder="filters.to" autocomplete="off">
+            <button id="date-reset" type="button" class="btn-reset" title="Nullstill">✕</button>
+          </div>
+          <div class="filter-group source-filter">
+            <label data-i18n="filters.sources">Kilder:</label>
+            <div class="source-checkboxes">
+              <label class="db-checkbox"><input type="checkbox" id="filter-dn" checked> DN</label>
+              <label class="db-checkbox"><input type="checkbox" id="filter-rn" checked> RN</label>
+              <label class="db-checkbox"><input type="checkbox" id="filter-dd" checked> DD</label>
+              <label class="db-checkbox"><input type="checkbox" id="filter-sdhk" checked> SDHK</label>
+              <label class="db-checkbox"><input type="checkbox" id="filter-df" checked> DF</label>
+              <label class="db-checkbox"><input type="checkbox" id="filter-di" checked> DI</label>
+            </div>
+          </div>
+        </div>
+      </details>
+      <details class="search-mode">
+        <summary data-i18n="fuzzy.title">Fuzzy</summary>
+        <div class="mode-content">
+          <label class="db-checkbox"><input type="checkbox" id="fuzzy-on" checked> <span data-i18n="fuzzy.on">Fuzzy-søk</span></label>
+          <div id="fuzzy-controls" class="fuzzy-controls">
+            <label for="fuzzy-distance" data-i18n="fuzzy.level">Fuzzy-nivå:</label>
+            <input type="range" id="fuzzy-distance" min="1" max="3" value="1" step="1" class="fuzzy-slider">
+            <span id="fuzzy-label" class="fuzzy-label">Moderat</span>
+          </div>
+          <p class="mode-hint" data-i18n="fuzzy.hint">Fuzzy-søk finner også ord som er stavet litt annerledes, f.eks. Kaytala for Caytala. Høyere nivå tillater flere avvik, men gir flere irrelevante treff. Gjelder ikke referansesøk.</p>
+        </div>
+      </details>
+      <details class="search-sorting">
+        <summary data-i18n="sort.title">Sortering</summary>
+        <div class="sorting-content">
+          <select id="sort-mode" class="sort-select" data-i18n-options>
+            <option value="date" data-i18n="filters.sort.date">Dato (eldst først)</option>
+            <option value="date-desc" data-i18n="filters.sort.date.desc">Dato (nyest først)</option>
+            <option value="completeness" data-i18n="filters.sort.completeness">Mest komplett</option>
+          </select>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <!-- Status and results -->
+  <div id="search-status" class="search-status"></div>
+  <div id="search-results"></div>
+  <div id="results-pagination" class="pagination" style="display:none;"></div>
+
+  <!-- Export bar (at bottom) -->
+  <div id="export-bar" class="export-bar" style="display:none;">
+    <span class="export-count"></span>
+    <div class="export-buttons">
+      <button id="export-csv" class="btn-small" disabled data-i18n="export.csv">Eksporter CSV</button>
+      <button id="export-txt" class="btn-small" disabled data-i18n="export.txt">Eksporter TXT</button>
+    </div>
+  </div>
+</div>
+
+<!-- Load progress bar -->
+<div id="load-progress" style="position:fixed;top:0;left:0;height:3px;background:#4a7c59;width:0;transition:width 0.3s;z-index:9999;display:none;"></div>
+
+<script>window.SITE_BASE = "/SuperDiplomatarium-staging";</script>
+<script src="/SuperDiplomatarium-staging/assets/js/letter-display.js?v=1792409782"></script>
+<script src="/SuperDiplomatarium-staging/assets/js/search-v3.js?v=1792409782"></script>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p> 2026 Vetle Lars Wisløff Sandring</p>
+    </div>
+  </footer>
+  <script>
+    // Data files are kept between visits by a service worker (sw.js); it never serves pages or scripts.
+    if ('serviceWorker' in navigator) navigator.serviceWorker.register('/SuperDiplomatarium-staging/sw.js').catch(function () {});
+    // Mobile menu: the ☰ button (shown by CSS under 640px) opens and closes the nav links.
+    (function () {
+      var btn = document.querySelector('.nav-toggle'), links = document.getElementById('nav-links');
+      if (!btn || !links) return;
+      btn.addEventListener('click', function () {
+        var open = links.classList.toggle('is-open');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+    })();
+  </script>
+</body>
+</html>
